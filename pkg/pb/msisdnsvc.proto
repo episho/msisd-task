@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+package msisdn;
+
+option go_package = "./msisdnsvc";
+
+
+service MsisdnService {
+    //Get msisdn details
+    rpc GetMsisdnDetails (MsisdnRequest) returns (Msisdn);
+}
+
+message MsisdnRequest {
+    string msisdn = 1;
+}
+
+message Msisdn {
+    string mno = 1;
+    string cdc = 2;
+    string sn = 3;
+    string country_code = 4;
+    string country_name = 5;
+}
