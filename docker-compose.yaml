@@ -1,0 +1,11 @@
+version: '2'
+
+services:
+
+  server-main:
+    image: msisdn/task:latest
+    command: "./server"
+    env_file: .env
+    ports:
+      - "1234:1234"
+
